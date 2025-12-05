@@ -28,13 +28,13 @@ function App() {
             </div>
 
             <nav className="hidden md:flex space-x-8">
-              <button onClick={() => scrollToSection('servizi')} className="text-purple-600 hover:text-purple-800 font-semibold transition-colors">
+              <button onClick={() => scrollToSection('servizi')} className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors">
                 Servizi
               </button>
-              <button onClick={() => scrollToSection('chi-siamo')} className="text-purple-600 hover:text-purple-800 font-semibold transition-colors">
+              <button onClick={() => scrollToSection('chi-siamo')} className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors">
                 Chi Sono
               </button>
-              <button onClick={() => scrollToSection('contatti')} className="text-purple-600 hover:text-purple-800 font-semibold transition-colors">
+              <button onClick={() => scrollToSection('contatti')} className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors">
                 Contattami
               </button>
             </nav>
@@ -49,13 +49,13 @@ function App() {
 
           {mobileMenuOpen && (
             <nav className="md:hidden mt-4 pb-4 flex flex-col space-y-3">
-              <button onClick={() => scrollToSection('servizi')} className="text-purple-600 hover:text-purple-800 font-semibold transition-colors text-left">
+              <button onClick={() => scrollToSection('servizi')} className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors text-left">
                 Servizi
               </button>
-              <button onClick={() => scrollToSection('chi-siamo')} className="text-purple-600 hover:text-purple-800 font-semibold transition-colors text-left">
+              <button onClick={() => scrollToSection('chi-siamo')} className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors text-left">
                 Chi Sono
               </button>
-              <button onClick={() => scrollToSection('contatti')} className="text-purple-600 hover:text-purple-800 font-semibold transition-colors text-left">
+              <button onClick={() => scrollToSection('contatti')} className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors text-left">
                 Contattami
               </button>
             </nav>

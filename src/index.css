@@ -31,3 +31,31 @@ html {
 .service-card-hover:hover {
   animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite;
 }
+
+.nav-link {
+  position: relative;
+  transition: transform 200ms ease, color 200ms ease;
+  will-change: transform;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(to right, #ec4899, #7e22ce, #3b82f6);
+  transition: width 250ms ease;
+  border-radius: 9999px;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  transform: translateY(-3px);
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  width: 100%;
+}
