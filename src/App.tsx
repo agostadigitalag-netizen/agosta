@@ -1,64 +1,13 @@
-import { Menu, X, Phone, Mail } from 'lucide-react';
-import { useState } from 'react';
+import { Phone, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import Header from './components/Header';
 
 function App() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const JOTFORM_FORM_URL = 'https://form.jotform.com/253346605890058';
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
-    setMobileMenuOpen(false);
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
-      <header className="bg-white shadow-md sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <img src="/logo_agosta_digital_agency_sfondo_bianco.png" alt="Agosta Digital Agency" className="w-36 h-36 object-contain" />
-              <div>
-                <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 bg-clip-text text-transparent">Agosta Digital</h1>
-                <h2 className="text-1xl md:text-2xl font-bold bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 bg-clip-text text-transparent">Agency</h2>
-              </div>
-            </div>
-
-            <nav className="hidden md:flex space-x-8">
-              <button onClick={() => scrollToSection('servizi')} className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors">
-                Servizi
-              </button>
-              <button onClick={() => scrollToSection('chi-siamo')} className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors">
-                Chi Sono
-              </button>
-              <button onClick={() => scrollToSection('contatti')} className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors">
-                Contattami
-              </button>
-            </nav>
-
-            <button
-              className="md:hidden text-purple-600"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
-          </div>
-
-          {mobileMenuOpen && (
-            <nav className="md:hidden mt-4 pb-4 flex flex-col space-y-3">
-              <button onClick={() => scrollToSection('servizi')} className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors text-left">
-                Servizi
-              </button>
-              <button onClick={() => scrollToSection('chi-siamo')} className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors text-left">
-                Chi Sono
-              </button>
-              <button onClick={() => scrollToSection('contatti')} className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors text-left">
-                Contattami
-              </button>
-            </nav>
-          )}
-        </div>
-      </header>
+      <Header />
 
       <section className="bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 text-white py-20 md:py-32">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -77,7 +26,7 @@ function App() {
             I Nostri Servizi
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden service-card-hover transition-all duration-300 cursor-pointer">
+            <Link to="/social" className="bg-white rounded-2xl shadow-lg overflow-hidden service-card-hover transition-all duration-300 cursor-pointer block" aria-label="Vai alla pagina Gestione Social">
               <img
                 src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Gestione Social Cusago"
@@ -89,9 +38,9 @@ function App() {
                   Gestiamo i tuoi profili social con contenuti strategici, creativi e progettati per aumentare follower e interazioni.
                 </p>
               </div>
-            </div>
+            </Link>
 
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden service-card-hover transition-all duration-300 cursor-pointer">
+            <Link to="/websites" className="bg-white rounded-2xl shadow-lg overflow-hidden service-card-hover transition-all duration-300 cursor-pointer block" aria-label="Vai alla pagina Creazione Siti Internet">
               <img
                 src="https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Creazione Siti Internet Cusago"
@@ -103,9 +52,9 @@ function App() {
                   Realizziamo siti moderni, veloci e ottimizzati, pensati per convertire e valorizzare il tuo brand.
                 </p>
               </div>
-            </div>
+            </Link>
 
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden service-card-hover transition-all duration-300 cursor-pointer">
+            <Link to="/qrcode" className="bg-white rounded-2xl shadow-lg overflow-hidden service-card-hover transition-all duration-300 cursor-pointer block" aria-label="Vai alla pagina Creazione QR Code">
               <img
                 src="/qrcodeService.png"
                 alt="Creazione QR Code Cusago"
@@ -117,7 +66,7 @@ function App() {
                   Generiamo QR Code professionali per campagne marketing, menù digitali, landing page e molto altro.
                 </p>
               </div>
-            </div>
+            </Link>
 
            
           </div>
