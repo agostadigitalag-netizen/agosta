@@ -17,14 +17,11 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <img src="/logo_sfondo_bianco.png" alt="Agosta Digital Agency Logo" className="w-36 h-36 object-contain" />
-              <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 bg-clip-text text-transparent">
-                Agosta Digital
-                <br />
-                <h2 className="text-1xl md:text-2xl font-bold bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 bg-clip-text text-transparent">
-                Agency
-                 </h2>
-              </h1>
+              <img src="/logo_agosta_digital_agency_sfondo_bianco.png" alt="Agosta Digital Agency" className="w-36 h-36 object-contain" />
+              <div>
+                <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 bg-clip-text text-transparent">Agosta Digital</h1>
+                <h2 className="text-1xl md:text-2xl font-bold bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 bg-clip-text text-transparent">Agency</h2>
+              </div>
             </div>
 
             <nav className="hidden md:flex space-x-8">
@@ -75,15 +72,15 @@ function App() {
       </section>
 
       <section id="servizi" className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl font-bold text-purple-600 text-center mb-12">
             I Nostri Servizi
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden service-card-hover transition-all duration-300 cursor-pointer">
               <img
                 src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Gestione Social"
+                alt="Gestione Social Cusago"
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
@@ -97,7 +94,7 @@ function App() {
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden service-card-hover transition-all duration-300 cursor-pointer">
               <img
                 src="https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Creazione Siti Internet"
+                alt="Creazione Siti Internet Cusago"
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
@@ -110,8 +107,8 @@ function App() {
 
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden service-card-hover transition-all duration-300 cursor-pointer">
               <img
-                src="https://images.pexels.com/photos/4065876/pexels-photo-4065876.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Creazione QR Code"
+                src="/qrcodeService.png"
+                alt="Creazione QR Code Cusago"
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
@@ -122,19 +119,7 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden service-card-hover transition-all duration-300 cursor-pointer">
-              <img
-                src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Strategie Social"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-800 mb-3">Strategie Social</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Studiamo e applichiamo strategie di crescita per aumentare visibilità, engagement e vendite.
-                </p>
-              </div>
-            </div>
+           
           </div>
         </div>
       </section>
