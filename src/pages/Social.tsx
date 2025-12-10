@@ -1,9 +1,34 @@
 import Header from '../components/Header';
+import { Helmet } from 'react-helmet-async';
 
 export default function Social() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
       <Header />
+      <Helmet>
+        <title>Gestione Social Media Milano e Cusago | Agosta Digital</title>
+        <meta name="description" content="Strategie social su misura: piani editoriali, contenuti e report per far crescere il tuo brand." />
+        <link rel="canonical" href="https://www.agostadigital.it/social" />
+        <meta property="og:title" content="Gestione Social Media | Agosta Digital" />
+        <meta property="og:description" content="Aumenta visibilità e interazioni con strategie e contenuti professionali." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.agostadigital.it/social" />
+        <meta property="og:image" content="https://www.agostadigital.it/logo.png" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Gestione Social Media",
+            "provider": {
+              "@type": "Organization",
+              "name": "Agosta Digital Agency"
+            },
+            "areaServed": "Milano, Cusago",
+            "serviceType": "Social Media Marketing",
+            "url": "https://www.agostadigital.it/social"
+          }
+        `}</script>
+      </Helmet>
 
       <section className="bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 text-white py-20 md:py-32">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -31,4 +56,3 @@ export default function Social() {
     </div>
   );
 }
-

@@ -1,6 +1,7 @@
 import { Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from './components/Header';
+import { Helmet } from 'react-helmet-async';
 
 function App() {
   const JOTFORM_FORM_URL = 'https://form.jotform.com/253346605890058';
@@ -8,6 +9,36 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
       <Header />
+      <Helmet>
+        <meta property="og:site_name" content="Agosta Digital Agency" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Agosta Digital Agency",
+            "url": "https://www.agostadigital.it/",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://www.agostadigital.it/?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        `}</script>
+      </Helmet>
+      <Helmet>
+        <title>Agosta Digital | Agenzia Social Media Marketing Cusago e Milano</title>
+        <meta name="description" content="Agenzia digitale a Cusago: gestione social, creazione siti internet e QR Code. Strategie su misura per far crescere il tuo business." />
+        <link rel="canonical" href="https://www.agostadigital.it/" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Agosta Digital Agency",
+            "url": "https://www.agostadigital.it/",
+            "logo": "https://www.agostadigital.it/logo.png"
+          }
+        `}</script>
+      </Helmet>
 
       <section className="bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 text-white py-20 md:py-32">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -34,6 +65,10 @@ function App() {
                 src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Gestione Social Cusago"
                 className="w-full h-48 object-cover"
+                loading="lazy"
+                decoding="async"
+                width="800"
+                height="480"
               />
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">Gestione Social</h3>
@@ -48,6 +83,10 @@ function App() {
                 src="https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Creazione Siti Internet Cusago"
                 className="w-full h-48 object-cover"
+                loading="lazy"
+                decoding="async"
+                width="800"
+                height="480"
               />
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">Creazione Siti Internet</h3>
@@ -62,6 +101,10 @@ function App() {
                 src="/qrcodeService.png"
                 alt="Creazione QR Code Cusago"
                 className="w-full h-48 object-cover"
+                loading="lazy"
+                decoding="async"
+                width="800"
+                height="480"
               />
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">Creazione QR Code</h3>

@@ -1,9 +1,34 @@
 import Header from '../components/Header';
+import { Helmet } from 'react-helmet-async';
 
 export default function Qrcode() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
       <Header />
+      <Helmet>
+        <title>QR Code Professionali Milano e Cusago | Agosta Digital</title>
+        <meta name="description" content="Creazione di QR Code personalizzati per campagne marketing, menù digitali e landing page." />
+        <link rel="canonical" href="https://www.agostadigital.it/qrcode" />
+        <meta property="og:title" content="Creazione QR Code | Agosta Digital" />
+        <meta property="og:description" content="QR Code brandizzati e tracciabili per integrare offline e online." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.agostadigital.it/qrcode" />
+        <meta property="og:image" content="https://www.agostadigital.it/logo.png" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Creazione QR Code",
+            "provider": {
+              "@type": "Organization",
+              "name": "Agosta Digital Agency"
+            },
+            "areaServed": "Milano, Cusago",
+            "serviceType": "QR Code",
+            "url": "https://www.agostadigital.it/qrcode"
+          }
+        `}</script>
+      </Helmet>
 
       <section className="bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 text-white py-20 md:py-32">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -31,4 +56,3 @@ export default function Qrcode() {
     </div>
   );
 }
-

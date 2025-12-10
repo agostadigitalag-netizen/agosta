@@ -12,8 +12,8 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <img src="/logo_agosta_digital_agency_sfondo_bianco.png" alt="Agosta Digital Agency" className="w-36 h-36 object-contain" />
             <div>
-              <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 bg-clip-text text-transparent">Agosta Digital</h1>
-              <h2 className="text-1xl md:text-2xl font-bold bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 bg-clip-text text-transparent">Agency</h2>
+              <span className="block text-2xl md:text-3xl font-bold bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 bg-clip-text text-transparent">Agosta Digital</span>
+              <span className="block text-1xl md:text-2xl font-bold bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 bg-clip-text text-transparent">Agency</span>
             </div>
           </div>
 
@@ -54,4 +54,3 @@ export default function Header() {
     </header>
   );
 }
-
