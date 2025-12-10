@@ -11,7 +11,10 @@ function App() {
 
       <section className="bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 text-white py-20 md:py-32">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            Agenzia di Marketing Digitale
+          </h1>
+          <h2 className="text-xl md:text-2xl font-light leading-relaxed">
             La Tua Crescita Digitale Inizia Qui
           </h2>
           <p className="text-xl md:text-2xl font-light leading-relaxed">
