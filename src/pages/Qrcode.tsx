@@ -17,6 +17,37 @@ export default function Qrcode() {
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Agosta Digital Agency",
+            "url": "https://www.agostadigital.it/",
+            "logo": "https://www.agostadigital.it/logo.png",
+            "telephone": "3500724206",
+            "email": "agostadigitalag@gmail.com"
+          }
+        `}</script>
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.agostadigital.it/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "QR Code",
+                "item": "https://www.agostadigital.it/qrcode"
+              }
+            ]
+          }
+        `}</script>
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
             "@type": "Service",
             "name": "Creazione QR Code",
             "provider": {

@@ -6,6 +6,37 @@ export default function Social() {
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
       <Header />
       <Helmet>
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Agosta Digital Agency",
+            "url": "https://www.agostadigital.it/",
+            "logo": "https://www.agostadigital.it/logo.png",
+            "telephone": "3500724206",
+            "email": "agostadigitalag@gmail.com"
+          }
+        `}</script>
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.agostadigital.it/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Social",
+                "item": "https://www.agostadigital.it/social"
+              }
+            ]
+          }
+        `}</script>
         <title>Gestione Social Media Milano e Cusago | Agosta Digital</title>
         <meta name="description" content="Strategie social su misura: piani editoriali, contenuti e report per far crescere il tuo brand." />
         <link rel="canonical" href="https://www.agostadigital.it/social" />
