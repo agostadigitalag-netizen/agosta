@@ -72,14 +72,18 @@ export default function Qrcode() {
 
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Uso</h3>
-              <p className="text-gray-600">Campagne offline-to-online, packaging, cartellonistica e eventi.</p>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Marketing e Aziende</h3>
+              <p className="text-gray-600">Link a pagine prodotto, video aziendali, storie o tutorial, Menù digitali per ristoranti, Accesso Wi-Fi gratuito per i clienti e Contatti per biglietti da visita.</p>
             </div>
             <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Personalizzazione</h3>
-              <p className="text-gray-600">Branding, colori, URL dinamici e tracciamento.</p>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Eventi e Informazioni</h3>
+              <p className="text-gray-600">Mappe e indicazioni per raggiungere un luogo specifico, Partecipazione a sondaggi o concorsi, Informazioni su mostre o eventi.</p>
+            </div>
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Personali e Pratici</h3>
+              <p className="text-gray-600">Aggiunta rapida di un contatto, Link a gallerie di immagini o portfolio.</p>
             </div>
           </div>
         </div>

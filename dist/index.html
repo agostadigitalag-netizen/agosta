@@ -27,11 +27,13 @@
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:type" content="image/png" />
-<meta name="robots" content="index, follow"> 
-  <script type="module" crossorigin src="/assets/index-Dssg5Cpv.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/vendor-CWrLTJ_e.js">
-  <link rel="stylesheet" crossorigin href="/assets/index-DhNl590j.css">
-</head>
+    <meta name="robots" content="index, follow"> 
+    <meta name="facebook-pixel-id" content="">
+    <meta name="ga-measurement-id" content="">
+    <script type="module" crossorigin src="/assets/index-Dssg5Cpv.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-CWrLTJ_e.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-DhNl590j.css">
+  </head>
   <body>
     <div id="root"></div>
     <script type="text/javascript">
@@ -49,6 +51,32 @@
           w.onload = loader;
         }
       })(window, document);
+    </script>
+    <script type="text/javascript">
+      (function () {
+        var pixelMeta = document.querySelector('meta[name="facebook-pixel-id"]');
+        var pixelId = pixelMeta && pixelMeta.getAttribute('content');
+        if (pixelId) {
+          !(function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+          })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+          window.fbq('init', pixelId);
+          window.fbq('track', 'PageView');
+        }
+
+        var gaMeta = document.querySelector('meta[name="ga-measurement-id"]');
+        var gaId = gaMeta && gaMeta.getAttribute('content');
+        if (gaId) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { window.dataLayer.push(arguments); }
+          var gtagScript = document.createElement('script');
+          gtagScript.async = true;
+          gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
+          document.head.appendChild(gtagScript);
+          gtag('js', new Date());
+          gtag('config', gaId);
+        }
+      })();
     </script>
   </body>
 </html>
