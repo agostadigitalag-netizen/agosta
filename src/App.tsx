@@ -1,10 +1,20 @@
 import { Phone, Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import Header from './components/Header';
 import { Helmet } from 'react-helmet-async';
+import Footer from './components/Footer';
 
 function App() {
   const JOTFORM_FORM_URL = 'https://form.jotform.com/253346605890058';
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.slice(1);
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [location.hash]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
@@ -142,7 +152,7 @@ function App() {
                   <Phone className="w-6 h-6" />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-sm text-gray-500">Telefono</div>
+                  <div className="text-sm text-gray-500">Telefono (non ancora disponibile)</div>
                   <div className="text-lg font-semibold text-gray-900">3500724206</div>
                 </div>
               </a>
@@ -177,42 +187,7 @@ function App() {
         </div>
       </section>
 
-      <footer className="bg-pink-50 py-12 mt-16 border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <div className="text-center md:text-left">
-              <p className="text-gray-600">
-                © 2025 Agosta Digital Agency - Social Media Marketing, Siti Web, SEO, Branding, Digital Strategy, QR Code, Gestione Social
-              </p>
-              <p className="text-gray-600 mt-2">
-                Tel: <a href="tel:3500724206" className="text-purple-600 hover:text-purple-800 font-semibold transition-colors">3500724206</a>
-              </p>
-              <p className="text-gray-600">
-                Email: <a href="mailto:agostadigitalag@gmail.com" className="text-purple-600 hover:text-purple-800 font-semibold transition-colors">agostadigitalag@gmail.com</a>
-              </p>
-            </div>
-            <div className="text-center md:text-right space-x-6">
-              <a
-                href="https://www.iubenda.com/privacy-policy/70430177"
-                className="iubenda-white iubenda-noiframe iubenda-embed inline-block"
-                title="Privacy Policy"
-              >
-                Privacy Policy
-              </a>
-              <a href="#cookies" className="text-purple-600 hover:text-purple-800 font-semibold transition-colors inline-block">
-                
-              </a>
-              <a
-                href="https://www.iubenda.com/privacy-policy/70430177/cookie-policy"
-                className="iubenda-white iubenda-noiframe iubenda-embed inline-block"
-                title="Cookie Policy"
-              >
-                Cookie Policy
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import { Helmet } from 'react-helmet-async';
 
 export default function Websites() {
@@ -99,6 +100,7 @@ export default function Websites() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

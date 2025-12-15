@@ -1,4 +1,5 @@
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import { Helmet } from 'react-helmet-async';
 
 export default function Social() {
@@ -84,6 +85,7 @@ export default function Social() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

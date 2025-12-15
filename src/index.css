@@ -10,6 +10,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: 96px;
+}
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);

@@ -1,4 +1,5 @@
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import { Helmet } from 'react-helmet-async';
 
 export default function Qrcode() {
@@ -88,6 +89,7 @@ export default function Qrcode() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
