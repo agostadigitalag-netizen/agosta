@@ -72,7 +72,9 @@ export default function Qrcode() {
         `}</script>
       </Helmet>
 
-      <section className="bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 text-white py-20 md:py-32">
+      <section className="relative bg-gradient-to-r from-pink-500 via-purple-600 to-white-500 text-white py-20 md:py-32">
+      <div className="absolute inset-0 bg-[url('/logo_agosta_digital_trasparente.png')] bg-no-repeat bg-right-top bg-contain opacity-100 pointer-events-none" aria-hidden="true"></div>
+
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">Creazione QR Code</h2>
           <p className="text-xl md:text-2xl font-light leading-relaxed">
@@ -96,9 +98,41 @@ export default function Qrcode() {
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Personali e Pratici</h3>
               <p className="text-gray-600">Aggiunta rapida di un contatto, Link a gallerie di immagini o portfolio.</p>
             </div>
+
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <a
+                href="https://sites.google.com/view/siciliainboccatest/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Apri esempio menù ristorante Sicilia in Bocca"
+                className="block"
+              >
+                <img
+                  src="/frame.png"
+                  alt="Esempio di menù per ristoranti collegato via QR Code"
+                  className="w-full h-50 object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+              <h3 className="text-2xl font-bold text-gray-800 mb-3 mt-6">Esempio Menù per Ristoranti</h3>
+              <p className="text-gray-600">
+                Un QR Code può rimandare al menù digitale del ristorante: rapido da aggiornare, sempre disponibile e facile da consultare.
+              </p>
+              <a
+                href="https://sites.google.com/view/siciliainboccatest/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block text-purple-600 hover:text-purple-800 font-semibold transition-colors"
+              >
+                Clicca sul link per vedere il menù di esempio associato al qr code della immagine (le info inserite sono inventate)
+              </a>
+            </div>
           </div>
         </div>
       </section>
+
+      
       <Footer />
     </div>
   );

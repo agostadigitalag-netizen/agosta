@@ -72,7 +72,8 @@ export default function Social() {
         `}</script>
       </Helmet>
 
-      <section className="bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 text-white py-20 md:py-32">
+      <section className="relative bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 text-white py-20 md:py-32">
+        <div className="absolute inset-0 bg-[url('/logo_agosta_digital_trasparente.png')] bg-no-repeat bg-right-top bg-contain opacity-100 pointer-events-none" aria-hidden="true"></div>
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">Gestione Social</h2>
           <p className="text-xl md:text-2xl font-light leading-relaxed">
