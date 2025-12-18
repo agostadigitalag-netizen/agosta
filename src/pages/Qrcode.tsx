@@ -1,15 +1,25 @@
-import Header from '../components/Header';
+import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import { Helmet } from 'react-helmet-async';
 
 export default function Qrcode() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
-      <Header />
+      <Sidebar />
       <Helmet>
         <title>QR Code Professionali Milano e Cusago | Agosta Digital</title>
         <meta name="description" content="Creazione di QR Code personalizzati per campagne marketing, menù digitali e landing page." />
         <link rel="canonical" href="https://www.agostadigital.it/qrcode" />
+        <meta name="robots" content="index,follow" />
+        <link rel="alternate" hrefLang="it" href="https://www.agostadigital.it/qrcode" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.agostadigital.it/qrcode" />
+        <meta property="og:locale" content="it_IT" />
+        <meta property="og:site_name" content="Agosta Digital Agency" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Creazione QR Code | Agosta Digital" />
+        <meta name="twitter:description" content="QR Code personalizzati per campagne marketing, menù digitali e landing page." />
+        <meta name="twitter:image" content="https://www.agostadigital.it/logo.png" />
+        <meta property="og:image:secure_url" content="https://www.agostadigital.it/logo.png" />
         <meta property="og:title" content="Creazione QR Code | Agosta Digital" />
         <meta property="og:description" content="QR Code brandizzati e tracciabili per integrare offline e online." />
         <meta property="og:type" content="website" />

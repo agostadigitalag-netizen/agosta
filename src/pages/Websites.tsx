@@ -1,11 +1,11 @@
-import Header from '../components/Header';
+import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import { Helmet } from 'react-helmet-async';
 
 export default function Websites() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
-      <Header />
+      <Sidebar />
       <Helmet>
         <script type="application/ld+json">{`
           {
@@ -41,6 +41,16 @@ export default function Websites() {
         <title>Creazione Siti Internet Milano e Cusago | Agosta Digital</title>
         <meta name="description" content="Siti web moderni e veloci: sviluppo, SEO, performance e design su misura a Milano e Cusago." />
         <link rel="canonical" href="https://www.agostadigital.it/websites" />
+        <meta name="robots" content="index,follow" />
+        <link rel="alternate" hrefLang="it" href="https://www.agostadigital.it/websites" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.agostadigital.it/websites" />
+        <meta property="og:locale" content="it_IT" />
+        <meta property="og:site_name" content="Agosta Digital Agency" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Creazione Siti Internet | Agosta Digital" />
+        <meta name="twitter:description" content="Siti moderni e veloci a Cusago e Milano. Design su misura, SEO e performance." />
+        <meta name="twitter:image" content="https://www.agostadigital.it/logo.png" />
+        <meta property="og:image:secure_url" content="https://www.agostadigital.it/logo.png" />
         <meta property="og:title" content="Creazione Siti Internet | Agosta Digital" />
         <meta property="og:description" content="Siti ottimizzati per conversioni e SEO. Design professionale e performance elevate." />
         <meta property="og:type" content="website" />

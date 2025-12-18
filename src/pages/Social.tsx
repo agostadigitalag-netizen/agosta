@@ -1,11 +1,11 @@
-import Header from '../components/Header';
+import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import { Helmet } from 'react-helmet-async';
 
 export default function Social() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
-      <Header />
+      <Sidebar />
       <Helmet>
         <script type="application/ld+json">{`
           {
@@ -41,6 +41,16 @@ export default function Social() {
         <title>Gestione Social Media Milano e Cusago | Agosta Digital</title>
         <meta name="description" content="Strategie social su misura: piani editoriali, contenuti e report per far crescere il tuo brand." />
         <link rel="canonical" href="https://www.agostadigital.it/social" />
+        <meta name="robots" content="index,follow" />
+        <link rel="alternate" hrefLang="it" href="https://www.agostadigital.it/social" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.agostadigital.it/social" />
+        <meta property="og:locale" content="it_IT" />
+        <meta property="og:site_name" content="Agosta Digital Agency" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Gestione Social Media | Agosta Digital" />
+        <meta name="twitter:description" content="Strategie social su misura con contenuti e report per far crescere il tuo brand." />
+        <meta name="twitter:image" content="https://www.agostadigital.it/logo.png" />
+        <meta property="og:image:secure_url" content="https://www.agostadigital.it/logo.png" />
         <meta property="og:title" content="Gestione Social Media | Agosta Digital" />
         <meta property="og:description" content="Aumenta visibilità e interazioni con strategie e contenuti professionali." />
         <meta property="og:type" content="website" />

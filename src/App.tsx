@@ -1,7 +1,7 @@
 import { Phone, Mail } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
-import Header from './components/Header';
+import Sidebar from './components/Sidebar';
 import { Helmet } from 'react-helmet-async';
 import Footer from './components/Footer';
 
@@ -18,7 +18,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
-      <Header />
       <Helmet>
         <meta property="og:site_name" content="Agosta Digital Agency" />
         <script type="application/ld+json">{`
@@ -39,6 +38,14 @@ function App() {
         <title>Agosta Digital | Agenzia Social Media Marketing Cusago e Milano</title>
         <meta name="description" content="Agenzia digitale a Cusago: gestione social, creazione siti internet e QR Code. Strategie su misura per far crescere il tuo business." />
         <link rel="canonical" href="https://www.agostadigital.it/" />
+        <meta name="robots" content="index,follow" />
+        <link rel="alternate" hrefLang="it" href="https://www.agostadigital.it/" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.agostadigital.it/" />
+        <meta property="og:locale" content="it_IT" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Agosta Digital | Agenzia Social Media Marketing Cusago e Milano" />
+        <meta name="twitter:description" content="Gestione social, creazione siti internet e QR Code. Strategie su misura per far crescere il tuo business a Cusago e Milano." />
+        <meta name="twitter:image" content="https://www.agostadigital.it/logo.png" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
@@ -50,19 +57,21 @@ function App() {
         `}</script>
       </Helmet>
 
-      <section className="bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 text-white py-20 md:py-32">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Agenzia di Marketing Digitale
-          </h1>
-          <h2 className="text-xl md:text-2xl font-light leading-relaxed">
-            La Tua Crescita Digitale Inizia Qui
-          </h2>
-          <p className="text-xl md:text-2xl font-light leading-relaxed">
-            Aumentiamo la tua visibilità online, trasformiamo i tuoi social e creiamo strategie che portano risultati reali.
-          </p>
-        </div>
-      </section>
+      <Sidebar />
+          <section className="relative bg-gradient-to-r from-pink-500 via-purple-600 to-white-500 text-white py-20 md:py-32">
+            <div className="absolute inset-0 bg-[url('/logo_agosta_digital_trasparente.png')] bg-no-repeat bg-right-top bg-contain opacity-100 pointer-events-none" aria-hidden="true"></div>
+            <div className="max-w-4xl mx-auto px-4 text-center">
+               <h1 className="text-3xl md:text-6xl font-bold mb-6 leading-tight">
+                Agenzia di Marketing Digitale
+              </h1>
+              <h2 className="text-xl md:text-2xl font-light leading-relaxed">
+                La Tua Crescita Digitale Inizia Qui
+              </h2>
+              <p className="text-xl md:text-2xl font-light leading-relaxed">
+                Aumentiamo la tua visibilità online, trasformiamo i tuoi social e creiamo strategie che portano risultati reali.
+              </p>
+            </div>
+          </section>
 
       <section id="servizi" className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
@@ -186,8 +195,8 @@ function App() {
           </form>
         </div>
       </section>
+          <Footer />
 
-      <Footer />
     </div>
   );
 }

@@ -18,6 +18,9 @@ export default function Header() {
           </div>
 
           <nav className="hidden md:flex space-x-8">
+             <Link to="/" className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors">
+              Home
+            </Link>
             <Link to="/#servizi" className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors">
               Servizi
             </Link>
@@ -39,6 +42,9 @@ export default function Header() {
 
         {mobileMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 flex flex-col space-y-3">
+             <Link to="/" className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors text-left" onClick={() => setMobileMenuOpen(false)}>
+              Home
+            </Link>
             <Link to="/#servizi" className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors text-left" onClick={() => setMobileMenuOpen(false)}>
               Servizi
             </Link>
