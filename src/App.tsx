@@ -58,18 +58,24 @@ function App() {
       </Helmet>
 
       <Sidebar />
-          <section className="relative bg-gradient-to-r from-pink-500 via-purple-600 to-white-500 text-white py-20 md:py-32">
-            <div className="absolute bottom-2 right-2 w-[160px] h-[160px] md:w-[220px] md:h-[220px] bg-[url('/logo_agosta_digital_trasparente.png')] bg-no-repeat bg-right-bottom bg-contain opacity-100 pointer-events-none" aria-hidden="true"></div>
+          <section className="relative bg-gradient-to-r from-pink-500 via-white-500 to-purple-300 text-white py-20 md:py-32">
             <div className="max-w-4xl mx-auto px-4 text-center">
-               <h1 className="text-3xl md:text-6xl font-bold mb-6 leading-tight">
-                Agenzia di Marketing Digitale
-              </h1>
-              <h2 className="text-xl md:text-2xl font-light leading-relaxed">
+               <h1 className="text-3xl md:text-6xl font-bold mb-6 leading-tight text-purple-600">
+                 Agenzia di Marketing Digitale
+               </h1>
+              <h2 className="text-xl md:text-2xl leading-relaxed text-purple-600 font-bold">
                 La Tua Crescita Digitale Inizia Qui
               </h2>
-              <p className="text-xl md:text-2xl font-light leading-relaxed">
+              <p className="text-xl md:text-2xl leading-relaxed text-purple-600 font-bold">
                 Aumentiamo la tua visibilità online, trasformiamo i tuoi social e creiamo strategie che portano risultati reali.
               </p>
+              <img
+                src="/logo_agosta_digital_trasparente.png"
+                alt="Logo Agosta Digital trasparente"
+                className="mx-auto mt-6 w-[160px] h-[160px] md:w-[220px] md:h-[220px] object-contain"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </section>
 
