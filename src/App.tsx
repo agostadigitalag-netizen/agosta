@@ -59,7 +59,7 @@ function App() {
 
       <Sidebar />
           <section className="relative bg-gradient-to-r from-pink-500 via-purple-600 to-white-500 text-white py-20 md:py-32">
-            <div className="absolute inset-0 bg-[url('/logo_agosta_digital_trasparente.png')] bg-no-repeat bg-right-top bg-contain opacity-100 pointer-events-none" aria-hidden="true"></div>
+            <div className="absolute bottom-2 right-2 w-[160px] h-[160px] md:w-[220px] md:h-[220px] bg-[url('/logo_agosta_digital_trasparente.png')] bg-no-repeat bg-right-bottom bg-contain opacity-100 pointer-events-none" aria-hidden="true"></div>
             <div className="max-w-4xl mx-auto px-4 text-center">
                <h1 className="text-3xl md:text-6xl font-bold mb-6 leading-tight">
                 Agenzia di Marketing Digitale
