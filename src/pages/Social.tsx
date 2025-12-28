@@ -97,7 +97,7 @@ export default function Social() {
             </div>
             <div className="bg-white rounded-2xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Report & metriche</h3>
-              <p className="text-gray-600">Analisi delle performance e ottimizzazioni periodiche.</p>
+              <p className="text-gray-600">Creazione post e Gestione Social</p>
             </div>
           </div>
         </div>
