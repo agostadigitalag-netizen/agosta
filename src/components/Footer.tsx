@@ -8,7 +8,7 @@ export default function Footer() {
               © 2025 Agosta Digital Agency - Social Media Marketing, Siti Web, SEO, Branding, Digital Strategy, QR Code, Gestione Social
             </p>
             <p className="text-gray-600 mt-2">
-              Tel: <a href="tel:3500724206" className="text-purple-600 hover:text-purple-800 font-semibold transition-colors">3500724206</a>
+              Tel: <a href="tel:3480961807" className="text-purple-600 hover:text-purple-800 font-semibold transition-colors">3480961807</a>
             </p>
             <p className="text-gray-600">
               Email: <a href="mailto:agostadigitalag@gmail.com" className="text-purple-600 hover:text-purple-800 font-semibold transition-colors">agostadigitalag@gmail.com</a>

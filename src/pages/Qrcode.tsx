@@ -32,7 +32,7 @@ export default function Qrcode() {
             "name": "Agosta Digital Agency",
             "url": "https://www.agostadigital.it/",
             "logo": "https://www.agostadigital.it/logo.png",
-            "telephone": "3500724206",
+            "telephone": "3480961807",
             "email": "agostadigitalag@gmail.com"
           }
         `}</script>

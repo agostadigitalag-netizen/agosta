@@ -167,8 +167,8 @@ function App() {
                   <Phone className="w-6 h-6" />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-sm text-gray-500">Telefono (non ancora disponibile)</div>
-                  <div className="text-lg font-semibold text-gray-900">3500724206</div>
+                  <div className="text-sm text-gray-500">Telefono</div>
+                  <div className="text-lg font-semibold text-gray-900">3480961807</div>
                 </div>
               </a>
               <a className="bg-white rounded-2xl shadow-xl p-6 flex items-center gap-4 hover:shadow-2xl transition-shadow w-full">
