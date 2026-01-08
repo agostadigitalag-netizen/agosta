@@ -67,27 +67,27 @@ function App() {
                 loading="lazy"
                 decoding="async"
               />
-               <h1 className="text-2xl md:text-5xl font-bold mb-4 leading-snug text-white-600">
+               <h1 className="text-2xl md:text-5xl font-bold mb-4 leading-snug text-white-600 bullet-enter bullet-enter-delay-1">
                  Trasformiamo i social in uno strumento per acquisire clienti
                </h1>
-              <h2 className="text-lg md:text-xl leading-snug text-white-600 font-bold">
+              <h2 className="text-lg md:text-xl leading-snug text-white-600 font-bold bullet-enter bullet-enter-delay-2">
                Strategie di social media marketing su misura per aumentare visibilità, contatti e risultati reali per il tuo business.
               </h2>
 
-              <p className="text-l md:text-1xl leading-relaxed text-purple-600 font-bold bullet-enter bullet-enter-delay-1">
+              <p className="text-l md:text-1xl leading-relaxed text-purple-600 font-bold bullet-enter bullet-enter-delay-1 ">
                 ✔ Senza impegno
               </p>
-              <p className="text-l md:text-1xl leading-relaxed text-purple-600 font-bold bullet-enter bullet-enter-delay-2">
+              <p className="text-l md:text-1xl leading-relaxed text-purple-600 font-bold bullet-enter bullet-enter-delay-2 ">
                 ✔ Analisi personalizzata
               </p>
-              <p className="text-l md:text-1xl leading-relaxed text-purple-600 font-bold bullet-enter bullet-enter-delay-3">
+              <p className="text-l md:text-1xl leading-relaxed text-purple-600 font-bold bullet-enter bullet-enter-delay-3 ">
                 ✔ Risposta entro 24h
               </p>
               <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4 bullet-enter bullet-enter-delay-4">
                 <Link
                   to="/#contatti"
                   aria-label="Vai al form Contattami per una consulenza gratuita"
-                 className="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 text-white font-semibold shadow hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-purple-300"
+                 className="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 text-white font-semibold shadow hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-purple-300 transform transition-transform hover:scale-105 hover:-translate-y-0.5"
                 >
                   Richiedi una consulenza gratuita
                 </Link>

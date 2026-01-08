@@ -102,3 +102,9 @@ section[id] {
 .bullet-enter-delay-1 { animation-delay: 0s; }
 .bullet-enter-delay-2 { animation-delay: 0.4s; }
 .bullet-enter-delay-3 { animation-delay: 0.8s; }
+.bullet-enter-delay-4 { animation-delay: 1.2s; }
+
+.logo-float {
+  animation: float 6s ease-in-out infinite;
+  will-change: transform;
+}

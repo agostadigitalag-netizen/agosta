@@ -74,14 +74,14 @@ export default function Qrcode() {
 
       <section className="relative bg-gradient-to-r from-pink-500 via-white-500 to-purple-300 text-white py-20 md:py-32">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">Creazione QR Code</h2>
-          <p className="text-xl md:text-2xl font-light leading-relaxed">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight bullet-enter bullet-enter-delay-1">Creazione QR Code</h2>
+          <p className="text-xl md:text-2xl font-light leading-relaxed bullet-enter bullet-enter-delay-2">
             QR Code professionali per landing, menù digitali e campagne marketing.
           </p>
           <img
             src="/logo_agosta_digital_trasparente.png"
             alt="Logo Agosta Digital trasparente"
-            className="mx-auto mt-6 w-[160px] h-[160px] md:w-[220px] md:h-[220px] object-contain"
+            className="mx-auto mt-6 w-[160px] h-[160px] md:w-[220px] md:h-[220px] object-contain logo-float"
             loading="lazy"
             decoding="async"
           />
