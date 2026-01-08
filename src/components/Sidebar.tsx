@@ -66,6 +66,13 @@ export default function Sidebar() {
             >
               QR Code
             </Link>
+            <Link
+              to="/loghi"
+              className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors block"
+              onClick={() => setOpen(false)}
+            >
+              Loghi
+            </Link>
           </div>
           <Link
             to="/#chi-siamo"

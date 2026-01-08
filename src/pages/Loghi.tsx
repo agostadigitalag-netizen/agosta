@@ -2,7 +2,7 @@ import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import { Helmet } from 'react-helmet-async';
 
-export default function Social() {
+export default function Loghi() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
       <Sidebar />
@@ -32,51 +32,51 @@ export default function Social() {
               {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Social",
-                "item": "https://www.agostadigital.it/social"
+                "name": "Loghi",
+                "item": "https://www.agostadigital.it/loghi"
               }
             ]
           }
         `}</script>
-        <title>Gestione Social Media Milano e Cusago | Agosta Digital</title>
-        <meta name="description" content="Strategie social su misura: piani editoriali, contenuti e report per far crescere il tuo brand." />
-        <link rel="canonical" href="https://www.agostadigital.it/social" />
+        <title>Creazione Loghi Milano e Cusago | Agosta Digital</title>
+        <meta name="description" content="Loghi professionali e brand identity: design su misura, rebranding e manuale d’immagine a Milano e Cusago." />
+        <link rel="canonical" href="https://www.agostadigital.it/loghi" />
         <meta name="robots" content="index,follow" />
-        <link rel="alternate" hrefLang="it" href="https://www.agostadigital.it/social" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.agostadigital.it/social" />
+        <link rel="alternate" hrefLang="it" href="https://www.agostadigital.it/loghi" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.agostadigital.it/loghi" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="Agosta Digital Agency" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Gestione Social Media | Agosta Digital" />
-        <meta name="twitter:description" content="Strategie social su misura con contenuti e report per far crescere il tuo brand." />
+        <meta name="twitter:title" content="Creazione Loghi | Agosta Digital" />
+        <meta name="twitter:description" content="Logo design e brand identity per distinguere il tuo brand." />
         <meta name="twitter:image" content="https://www.agostadigital.it/logo.png" />
         <meta property="og:image:secure_url" content="https://www.agostadigital.it/logo.png" />
-        <meta property="og:title" content="Gestione Social Media | Agosta Digital" />
-        <meta property="og:description" content="Aumenta visibilità e interazioni con strategie e contenuti professionali." />
+        <meta property="og:title" content="Creazione Loghi | Agosta Digital" />
+        <meta property="og:description" content="Loghi professionali, rebranding e manuale d’immagine su misura." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.agostadigital.it/social" />
+        <meta property="og:url" content="https://www.agostadigital.it/loghi" />
         <meta property="og:image" content="https://www.agostadigital.it/logo.png" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "Service",
-            "name": "Gestione Social Media",
+            "name": "Logo Design",
             "provider": {
               "@type": "Organization",
               "name": "Agosta Digital Agency"
             },
             "areaServed": "Milano, Cusago",
-            "serviceType": "Social Media Marketing",
-            "url": "https://www.agostadigital.it/social"
+            "serviceType": "Logo Design",
+            "url": "https://www.agostadigital.it/loghi"
           }
         `}</script>
       </Helmet>
 
       <section className="relative bg-gradient-to-r from-pink-500 via-white-500 to-purple-300 text-white py-20 md:py-32">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">Gestione Social</h2>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">Creazione Loghi</h2>
           <p className="text-xl md:text-2xl font-light leading-relaxed">
-            Strategie e contenuti per aumentare visibilità, follower e interazioni.
+            Progettiamo loghi originali e riconoscibili, coerenti con i valori del tuo brand.
           </p>
           <img
             src="/logo_agosta_digital_trasparente.png"
@@ -90,18 +90,23 @@ export default function Social() {
 
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Gestione dei Social Media</h3>
-              <p className="text-gray-600">Pianificazione e gestione dei profili social con contenuti professionali, coerenti con l’identità del brand e orientati a migliorare visibilità, engagement e autorevolezza.</p>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Logo Design</h3>
+              <p className="text-gray-600">Ideazione e disegno del logo in formati ottimizzati per web e stampa.</p>
             </div>
             <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Creazione Contenuti</h3>
-              <p className="text-gray-600">Ideazione e realizzazione di contenuti visivi e testuali (post, reel, stories) pensati per comunicare in modo chiaro e coinvolgente, valorizzando i punti di forza del tuo brand.</p>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Brand Identity</h3>
+              <p className="text-gray-600">Palette colori, tipografie e linee guida per una comunicazione coerente.</p>
+            </div>
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Rebranding</h3>
+              <p className="text-gray-600">Aggiornamento del logo e del linguaggio visivo mantenendo riconoscibilità.</p>
             </div>
           </div>
         </div>
       </section>
+
       <Footer />
     </div>
   );

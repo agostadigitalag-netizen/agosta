@@ -63,3 +63,42 @@ section[id] {
 .nav-link:focus-visible::after {
   width: 100%;
 }
+
+@keyframes bulletFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.bullet-move {
+  display: inline-block;
+  animation: bulletFloat 3s ease-in-out infinite;
+  will-change: transform;
+}
+
+.bullet-delay-1 { animation-delay: 0s; }
+.bullet-delay-2 { animation-delay: 0.3s; }
+.bullet-delay-3 { animation-delay: 0.6s; }
+
+@keyframes bulletFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bullet-enter {
+  opacity: 0;
+  animation: bulletFadeInUp 0.6s ease-out forwards;
+}
+
+.bullet-enter-delay-1 { animation-delay: 0s; }
+.bullet-enter-delay-2 { animation-delay: 0.4s; }
+.bullet-enter-delay-3 { animation-delay: 0.8s; }

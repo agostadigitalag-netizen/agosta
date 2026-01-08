@@ -58,24 +58,41 @@ function App() {
       </Helmet>
 
       <Sidebar />
-          <section className="relative bg-gradient-to-r from-pink-500 via-white-500 to-purple-300 text-white py-20 md:py-32">
-            <div className="max-w-4xl mx-auto px-4 text-center">
-               <h1 className="text-3xl md:text-6xl font-bold mb-6 leading-tight text-purple-600">
-                 Agenzia di Marketing Digitale
-               </h1>
-              <h2 className="text-xl md:text-2xl leading-relaxed text-purple-600 font-bold">
-                La Tua Crescita Digitale Inizia Qui
-              </h2>
-              <p className="text-xl md:text-2xl leading-relaxed text-purple-600 font-bold">
-                Aumentiamo la tua visibilità online, trasformiamo i tuoi social e creiamo strategie che portano risultati reali.
-              </p>
-              <img
+          <section className="relative bg-gradient-to-r from-pink-500 via-white-500 to-purple-300 text-white py-6 md:py-12">
+            <div className="max-w-2xl mx-auto px-2 text-center">
+               <img
                 src="/logo_agosta_digital_trasparente.png"
                 alt="Logo Agosta Digital trasparente"
-                className="mx-auto mt-6 w-[160px] h-[160px] md:w-[220px] md:h-[220px] object-contain"
+                className="mx-auto mt-0 w-[160px] h-[160px] md:w-[220px] md:h-[220px] object-contain"
                 loading="lazy"
                 decoding="async"
               />
+               <h1 className="text-2xl md:text-5xl font-bold mb-4 leading-snug text-white-600">
+                 Trasformiamo i social in uno strumento per acquisire clienti
+               </h1>
+              <h2 className="text-lg md:text-xl leading-snug text-white-600 font-bold">
+               Strategie di social media marketing su misura per aumentare visibilità, contatti e risultati reali per il tuo business.
+              </h2>
+
+              <p className="text-l md:text-1xl leading-relaxed text-purple-600 font-bold bullet-enter bullet-enter-delay-1">
+                ✔ Senza impegno
+              </p>
+              <p className="text-l md:text-1xl leading-relaxed text-purple-600 font-bold bullet-enter bullet-enter-delay-2">
+                ✔ Analisi personalizzata
+              </p>
+              <p className="text-l md:text-1xl leading-relaxed text-purple-600 font-bold bullet-enter bullet-enter-delay-3">
+                ✔ Risposta entro 24h
+              </p>
+              <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4 bullet-enter bullet-enter-delay-4">
+                <Link
+                  to="/#contatti"
+                  aria-label="Vai al form Contattami per una consulenza gratuita"
+                 className="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 text-white font-semibold shadow hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-purple-300"
+                >
+                  Richiedi una consulenza gratuita
+                </Link>
+               
+              </div>
             </div>
           </section>
 
@@ -84,7 +101,7 @@ function App() {
           <h2 className="text-4xl md:text-5xl font-bold text-purple-600 text-center mb-12">
             I Nostri Servizi
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Link to="/social" className="bg-white rounded-2xl shadow-lg overflow-hidden service-card-hover transition-all duration-300 cursor-pointer block" aria-label="Vai alla pagina Gestione Social">
               <img
                 src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800"
@@ -99,6 +116,24 @@ function App() {
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">Gestione Social</h3>
                 <p className="text-gray-600 leading-relaxed">
                   Gestiamo i tuoi profili social con contenuti strategici, creativi e progettati per aumentare follower e interazioni.
+                </p>
+              </div>
+            </Link>
+
+            <Link to="/loghi" className="bg-white rounded-2xl shadow-lg overflow-hidden service-card-hover transition-all duration-300 cursor-pointer block" aria-label="Vai alla pagina Creazione Loghi">
+              <img
+                src="/servizio_loghi.jpg"
+                alt="Creazione Loghi Cusago"
+                className="w-full h-48 object-cover"
+                loading="lazy"
+                decoding="async"
+                width="800"
+                height="480"
+              />
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-gray-800 mb-3">Creazione Loghi</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Progettiamo loghi professionali e brand identity su misura per distinguere il tuo brand.
                 </p>
               </div>
             </Link>
@@ -150,10 +185,14 @@ function App() {
             Chi Sono
           </h2>
           <p className="text-xl md:text-2xl font-light leading-relaxed">
-            Sono Flavia Agosta e mi sono laureata in Informatica presso l’Università di Catania nel 2011 e dal 2012 lavoro come programmatrice a Milano, collaborando con diverse aziende nello sviluppo di software e soluzioni digitali personalizzate. Questa esperienza mi ha permesso di affinare competenze tecniche solide, una forte capacità di analisi e una visione strategica orientata ai risultati.
-            Negli anni ho imparato quanto sia importante unire la tecnologia alla comunicazione: per questo oggi ho scelto di mettere le mie competenze digitali al servizio di chi desidera far crescere la propria presenza online e così ho creato la mia Agenzia. Supporto professionisti, piccole attività e aziende nella definizione di strategie efficaci per i Social Media, aiutandoli a comunicare in modo chiaro, autentico e professionale.
-            Lavoro principalmente da casa, il che mi consente di dedicare tempo, cura e creatività a ogni progetto che seguo. Credo nella collaborazione, nella trasparenza e nella costruzione di percorsi digitali su misura, capaci di valorizzare davvero l’identità di ogni cliente.
-            La mia attività ha sede a Cusago, da cui opero quotidianamente per accompagnare le persone in un percorso di crescita digitale, combinando la precisione dell’informatica con l’immediatezza della comunicazione online.
+           Sono Flavia Agosta, fondatrice di Agosta Digital Agency.
+           Laureata in Informatica dal 2011 presso l’Università di Catania, lavoro dal 2012 nel settore della programmazione software collaborando con aziende nello sviluppo di software.
+
+           Nel tempo ho maturato competenze tecniche solide e una visione strategica orientata ai risultati, comprendendo quanto sia fondamentale unire tecnologia e comunicazione per costruire una presenza online efficace. Da questa consapevolezza nasce la mia agenzia, con l’obiettivo di supportare professionisti, piccole attività e aziende nella crescita del loro business attraverso strategie di Social Media Marketing su misura.
+
+           Affianco i miei clienti nella definizione di una comunicazione chiara, autentica e professionale, trasformando i social in uno strumento concreto per aumentare visibilità, credibilità e opportunità di contatto. Ogni progetto viene seguito con attenzione, metodo e creatività, privilegiando soluzioni personalizzate e orientate a risultati misurabili.
+
+           Opero da Cusago e lavoro prevalentemente da remoto, gestendo contemporaneamente il mio lavoro principale e la mia attività. Credo nella trasparenza, nel dialogo e nella costruzione di percorsi digitali su misura, capaci di valorizzare davvero l’identità di ogni cliente. 
           </p>
         </div>
       </section>
