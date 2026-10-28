@@ -8,7 +8,7 @@ export default function Sidebar() {
   return (
     <>
       <button
-        className="fixed top-5 left-5 z-50 text-purple-600"
+        className="fixed top-5 left-5 z-50 text-brand-800"
         onClick={() => setOpen(!open)}
         aria-label="Apri menù"
       >
@@ -22,7 +22,7 @@ export default function Sidebar() {
       >
         <div className="p-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="text-xl font-bold bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 bg-clip-text text-transparent">
+            <div className="text-xl font-bold bg-gradient-to-r from-brand-900 to-brand-500 bg-clip-text text-transparent">
               Agosta Digital
             </div>
           </div>
@@ -31,7 +31,7 @@ export default function Sidebar() {
         <nav className="px-2 pt-2 space-y-6">
           <Link
             to="/"
-            className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors block"
+            className="nav-link text-brand-800 hover:text-brand-600 font-semibold transition-colors block"
             onClick={() => setOpen(false)}
           >
             Home
@@ -39,7 +39,7 @@ export default function Sidebar() {
 
           <Link
             to="/#servizi"
-            className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors block"
+            className="nav-link text-brand-800 hover:text-brand-600 font-semibold transition-colors block"
             onClick={() => setOpen(false)}
           >
             Servizi
@@ -47,43 +47,50 @@ export default function Sidebar() {
           <div className="pl-4 space-y-3">
             <Link
               to="/social"
-              className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors block"
+              className="nav-link text-brand-800 hover:text-brand-600 font-semibold transition-colors block"
               onClick={() => setOpen(false)}
             >
               Social
             </Link>
             <Link
               to="/websites"
-              className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors block"
+              className="nav-link text-brand-800 hover:text-brand-600 font-semibold transition-colors block"
               onClick={() => setOpen(false)}
             >
               Websites
             </Link>
             <Link
               to="/qrcode"
-              className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors block"
+              className="nav-link text-brand-800 hover:text-brand-600 font-semibold transition-colors block"
               onClick={() => setOpen(false)}
             >
               QR Code
             </Link>
             <Link
               to="/loghi"
-              className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors block"
+              className="nav-link text-brand-800 hover:text-brand-600 font-semibold transition-colors block"
               onClick={() => setOpen(false)}
             >
               Loghi
             </Link>
           </div>
           <Link
+            to="/recensioni"
+            className="nav-link text-brand-800 hover:text-brand-600 font-semibold transition-colors block"
+            onClick={() => setOpen(false)}
+          >
+            Recensioni
+          </Link>
+          <Link
             to="/#chi-siamo"
-            className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors block"
+            className="nav-link text-brand-800 hover:text-brand-600 font-semibold transition-colors block"
             onClick={() => setOpen(false)}
           >
             Chi Sono
           </Link>
           <Link
             to="/#contatti"
-            className="nav-link text-purple-600 hover:text-purple-800 font-semibold transition-colors block"
+            className="nav-link text-brand-800 hover:text-brand-600 font-semibold transition-colors block"
             onClick={() => setOpen(false)}
           >
             Contattami

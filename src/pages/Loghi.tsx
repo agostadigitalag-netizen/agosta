@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function Loghi() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
+    <div className="min-h-screen bg-slate-50">
       <Sidebar />
       <Helmet>
         <script type="application/ld+json">{`
@@ -72,10 +72,10 @@ export default function Loghi() {
         `}</script>
       </Helmet>
 
-      <section className="relative bg-gradient-to-r from-pink-500 via-white-500 to-purple-300 text-white py-20 md:py-32">
+      <section className="relative bg-gradient-to-b from-brand-200 via-brand-100 to-brand-50 py-20 md:py-32">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight bullet-enter bullet-enter-delay-1">Creazione Loghi</h2>
-          <p className="text-xl md:text-2xl font-light leading-relaxed bullet-enter bullet-enter-delay-2">
+          <h2 className="text-4xl md:text-6xl font-bold text-brand-950 mb-6 leading-tight bullet-enter bullet-enter-delay-1">Creazione Loghi</h2>
+          <p className="text-xl md:text-2xl font-light text-slate-600 leading-relaxed bullet-enter bullet-enter-delay-2">
             Progettiamo loghi originali e riconoscibili, coerenti con i valori del tuo brand.
           </p>
           <img

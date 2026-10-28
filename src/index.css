@@ -25,10 +25,10 @@ section[id] {
 
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(15, 29, 64, 0.08);
   }
   50% {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 40px rgba(15, 29, 64, 0.14);
   }
 }
 
@@ -49,7 +49,7 @@ section[id] {
   bottom: -4px;
   height: 2px;
   width: 0%;
-  background: linear-gradient(to right, #ec4899, #7e22ce, #3b82f6);
+  background: linear-gradient(to right, #3b6df6, #1b368f);
   transition: width 250ms ease;
   border-radius: 9999px;
 }

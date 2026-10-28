@@ -1,13 +1,28 @@
 import { Phone, Mail } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Sidebar from './components/Sidebar';
 import { Helmet } from 'react-helmet-async';
 import Footer from './components/Footer';
 
 function App() {
-  const JOTFORM_FORM_URL = 'https://form.jotform.com/253346605890058';
+  const DESTINATARIO_EMAIL = 'agostadigitalag@gmail.com';
   const location = useLocation();
+  const [formData, setFormData] = useState({ nome: '', email: '', telefono: '', messaggio: '' });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const subject = `Richiesta dal sito - ${formData.nome}`;
+    const telefono = formData.telefono ? `\nTelefono: ${formData.telefono}` : '';
+    const body = `Nome: ${formData.nome}\nEmail: ${formData.email}${telefono}\n\n${formData.messaggio}`;
+    window.location.href = `mailto:${DESTINATARIO_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
   useEffect(() => {
     if (location.hash) {
       const id = location.hash.slice(1);
@@ -17,7 +32,7 @@ function App() {
   }, [location.hash]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
+    <div className="min-h-screen bg-slate-50">
       <Helmet>
         <meta property="og:site_name" content="Agosta Digital Agency" />
         <script type="application/ld+json">{`
@@ -58,7 +73,7 @@ function App() {
       </Helmet>
 
       <Sidebar />
-          <section className="relative bg-gradient-to-r from-pink-500 via-white-500 to-purple-300 text-white py-6 md:py-12">
+          <section className="relative bg-gradient-to-b from-brand-200 via-brand-100 to-brand-50 py-6 md:py-12">
             <div className="max-w-2xl mx-auto px-2 text-center">
                <img
                 src="/logo_agosta_digital_trasparente.png"
@@ -67,27 +82,27 @@ function App() {
                 loading="lazy"
                 decoding="async"
               />
-               <h1 className="text-2xl md:text-5xl font-bold mb-4 leading-snug text-white-600 bullet-enter bullet-enter-delay-1">
+               <h1 className="text-2xl md:text-5xl font-bold mb-4 leading-snug text-brand-950 bullet-enter bullet-enter-delay-1">
                  Trasformiamo i social in uno strumento per acquisire clienti
                </h1>
-              <h2 className="text-lg md:text-xl leading-snug text-white-600 font-bold bullet-enter bullet-enter-delay-2">
+              <h2 className="text-lg md:text-xl leading-snug text-slate-600 font-bold bullet-enter bullet-enter-delay-2">
                Strategie di social media marketing su misura per aumentare visibilità, contatti e risultati reali per il tuo business.
               </h2>
 
-              <p className="text-l md:text-1xl leading-relaxed text-purple-600 font-bold bullet-enter bullet-enter-delay-1 ">
+              <p className="text-l md:text-1xl leading-relaxed text-slate-700 font-bold bullet-enter bullet-enter-delay-1 ">
                 ✔ Senza impegno
               </p>
-              <p className="text-l md:text-1xl leading-relaxed text-purple-600 font-bold bullet-enter bullet-enter-delay-2 ">
+              <p className="text-l md:text-1xl leading-relaxed text-slate-700 font-bold bullet-enter bullet-enter-delay-2 ">
                 ✔ Analisi personalizzata
               </p>
-              <p className="text-l md:text-1xl leading-relaxed text-purple-600 font-bold bullet-enter bullet-enter-delay-3 ">
+              <p className="text-l md:text-1xl leading-relaxed text-slate-700 font-bold bullet-enter bullet-enter-delay-3 ">
                 ✔ Risposta entro 24h
               </p>
               <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4 bullet-enter bullet-enter-delay-4">
                 <Link
                   to="/#contatti"
                   aria-label="Vai al form Contattami per una consulenza gratuita"
-                 className="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 text-white font-semibold shadow hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-purple-300 transform transition-transform hover:scale-105 hover:-translate-y-0.5"
+                 className="inline-block px-6 py-3 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-semibold shadow-lg shadow-brand-900/20 focus:outline-none focus:ring-2 focus:ring-brand-300 transform transition-transform hover:scale-105 hover:-translate-y-0.5"
                 >
                   Richiedi una consulenza gratuita
                 </Link>
@@ -98,7 +113,7 @@ function App() {
 
       <section id="servizi" className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-purple-600 text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-900 text-center mb-12">
             I Nostri Servizi
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -179,30 +194,42 @@ function App() {
         </div>
       </section>
 
-      <section id="chi-siamo" className="bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 text-white py-20 md:py-32">
+      <section id="chi-siamo" className="bg-gradient-to-r from-brand-950 via-brand-900 to-brand-800 text-white py-20 md:py-32">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
             Chi Sono
           </h2>
           <p className="text-xl md:text-2xl font-light leading-relaxed">
-           Sono Flavia Agosta, fondatrice di Agosta Digital Agency.
-           Laureata in Informatica dal 2011 presso l’Università di Catania, lavoro dal 2012 nel settore della programmazione software collaborando con aziende nello sviluppo di software.
+Sono Flavia Agosta, fondatrice di Agosta Digital Agency, una realtà nata dall’incontro tra competenze tecnologiche, visione strategica e passione per la comunicazione digitale.
 
-           Nel tempo ho maturato competenze tecniche solide e una visione strategica orientata ai risultati, comprendendo quanto sia fondamentale unire tecnologia e comunicazione per costruire una presenza online efficace. Da questa consapevolezza nasce la mia agenzia, con l’obiettivo di supportare professionisti, piccole attività e aziende nella crescita del loro business attraverso strategie di Social Media Marketing su misura.
+Laureata in Informatica presso l’Università di Catania nel 2011, dal 2012 lavoro nel settore dello sviluppo software, collaborando con aziende nella progettazione e realizzazione di soluzioni digitali. Questo percorso mi ha permesso di consolidare solide competenze tecniche, sviluppare un approccio analitico e orientato ai risultati e comprendere il valore della tecnologia come leva strategica per la crescita.
 
-           Affianco i miei clienti nella definizione di una comunicazione chiara, autentica e professionale, trasformando i social in uno strumento concreto per aumentare visibilità, credibilità e opportunità di contatto. Ogni progetto viene seguito con attenzione, metodo e creatività, privilegiando soluzioni personalizzate e orientate a risultati misurabili.
+Da questa esperienza nasce Agosta Digital Agency, con l’obiettivo di affiancare professionisti, piccole attività e aziende nel rafforzamento della propria presenza online, attraverso strategie di Social Media Marketing personalizzate, costruite sulle esigenze e sugli obiettivi di ogni realtà.
 
-           Opero da Cusago e lavoro prevalentemente da remoto, gestendo contemporaneamente il mio lavoro principale e la mia attività. Credo nella trasparenza, nel dialogo e nella costruzione di percorsi digitali su misura, capaci di valorizzare davvero l’identità di ogni cliente. 
+Accompagno i miei clienti nella definizione di una comunicazione digitale chiara, coerente e riconoscibile, trasformando i social media in strumenti strategici per aumentare la visibilità, consolidare la credibilità del brand e generare nuove opportunità di business.
+
+Ogni progetto viene sviluppato con metodo, attenzione e creatività, attraverso un approccio su misura che mette al centro l’identità del cliente, il suo pubblico di riferimento e i risultati da raggiungere.
+
+Opero da Cusago e collaboro prevalentemente da remoto, offrendo un servizio flessibile e attento alle esigenze di ogni cliente.
+
+Credo in una comunicazione autentica, nelle relazioni professionali basate sulla fiducia e in strategie digitali progettate per valorizzare ciò che rende ogni attività unica.
+
+Il mio obiettivo è aiutare ogni cliente a costruire una presenza online solida, professionale e capace di accompagnare la crescita del proprio business.
+</p>
+<p className="text-xl md:text-2xl font-light leading-relaxed">
+<h3>LA MIA FILOSOFIA</h3>
+Strategia digitale, competenze tecnologiche e comunicazione su misura.
+Aiuto professionisti e aziende a valorizzare la propria identità online attraverso strategie digitali pensate per generare valore e opportunità concrete.
           </p>
         </div>
       </section>
 
       <section id="contatti" className="bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="space-y-8">
               <a className="bg-white rounded-2xl shadow-xl p-6 flex items-center gap-4 hover:shadow-2xl transition-shadow w-full">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 via-purple-600 to-blue-500 text-white flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-700 to-brand-500 text-white flex items-center justify-center">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div className="min-w-0">
@@ -211,7 +238,7 @@ function App() {
                 </div>
               </a>
               <a className="bg-white rounded-2xl shadow-xl p-6 flex items-center gap-4 hover:shadow-2xl transition-shadow w-full">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 via-purple-600 to-blue-500 text-white flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-700 to-brand-500 text-white flex items-center justify-center">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div className="min-w-0">
@@ -220,24 +247,88 @@ function App() {
                 </div>
               </a>
             </div>
-            <div className="lg:col-span-2 bg-white rounded-2xl shadow-xl overflow-hidden">
-              <iframe
-                src={JOTFORM_FORM_URL}
-                title="Modulo di contatto JotForm"
-                className="w-full h-[600px]"
-                frameBorder="0"
-                allow="geolocation; microphone; camera"
-              ></iframe>
+
+            <div className="lg:col-span-2 bg-white rounded-2xl shadow-xl p-8">
+              <h3 className="text-2xl font-bold text-brand-900 mb-6">Scrivimi</h3>
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  <div>
+                    <label htmlFor="nome" className="block text-sm font-semibold text-gray-700 mb-2">
+                      Nome e cognome
+                    </label>
+                    <input
+                      id="nome"
+                      name="nome"
+                      type="text"
+                      required
+                      value={formData.nome}
+                      onChange={handleChange}
+                      className="w-full rounded-xl border border-gray-300 px-4 py-3 text-gray-900 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="telefono" className="block text-sm font-semibold text-gray-700 mb-2">
+                      Telefono (facoltativo)
+                    </label>
+                    <input
+                      id="telefono"
+                      name="telefono"
+                      type="tel"
+                      value={formData.telefono}
+                      onChange={handleChange}
+                      className="w-full rounded-xl border border-gray-300 px-4 py-3 text-gray-900 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                    La tua email
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full rounded-xl border border-gray-300 px-4 py-3 text-gray-900 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="messaggio" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Messaggio
+                  </label>
+                  <textarea
+                    id="messaggio"
+                    name="messaggio"
+                    rows={6}
+                    required
+                    value={formData.messaggio}
+                    onChange={handleChange}
+                    className="w-full rounded-xl border border-gray-300 px-4 py-3 text-gray-900 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="inline-block px-6 py-3 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-semibold shadow-lg shadow-brand-900/20 focus:outline-none focus:ring-2 focus:ring-brand-300 transition-colors"
+                >
+                  Invia richiesta
+                </button>
+                <p className="text-sm text-gray-500">
+                  Il pulsante apre il tuo programma di posta con i dati già compilati: controlla il messaggio e premi Invia. Inviando accetti la{' '}
+                  <a
+                    href="https://www.iubenda.com/privacy-policy/70430177"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-brand-700 hover:text-brand-900 font-semibold transition-colors"
+                  >
+                    Privacy Policy
+                  </a>
+                  .
+                </p>
+              </form>
             </div>
           </div>
-          <form
-            action="mailto:agostadigitalag@gmail.com?subject=invio%20da%20sito"
-            method="POST"
-            encType="text/plain"
-            className="bg-white rounded-2xl shadow-xl p-8 space-y-6"
-          >
-           
-          </form>
         </div>
       </section>
           <Footer />

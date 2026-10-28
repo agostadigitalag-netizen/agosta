@@ -7,6 +7,7 @@ import Websites from './pages/Websites.tsx';
 import Qrcode from './pages/Qrcode.tsx';
 import Social from './pages/Social.tsx';
 import Loghi from './pages/Loghi.tsx';
+import Recensioni from './pages/Recensioni.tsx';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/qrcode" element={<Qrcode />} />
           <Route path="/social" element={<Social />} />
           <Route path="/loghi" element={<Loghi />} />
+          <Route path="/recensioni" element={<Recensioni />} />
         </Routes>
       </BrowserRouter>
     </HelmetProvider>
